@@ -49,4 +49,12 @@
 {{ end }}{{ end }}
 
 {{- /* Facebook Page Admin ID for Domain Insights */}}
-{{- with site.Social.facebook_admin }}<meta property="fb:admins" content="{{ . }}" />{{ end }}
+{{ $fbadmin := "" }}
+{{ range site.Params.socialIcons }}
+  {{- if eq .name "FacebookAdmin" }}
+    {{ $fbadmin = .url }}
+  {{- end }}
+{{ end }}
+{{ if $fbadmin }}
+  <meta property="fb:admins" content="{{ $fbadmin }}" />
+{{ end }}

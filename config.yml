@@ -1,6 +1,7 @@
 baseURL: "https://rosavandenende.github.io/" 
 title: Rosa van den Ende 
-paginate: 20
+pagination:
+  pagerSize: 20
 theme: PaperMod
 
 enableInlineShortcodes: true
