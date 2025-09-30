@@ -12,21 +12,27 @@ taxonomies:
 
 menu:
     main:
-        - name: Publications
-          url: papers/
+        - name: Experience
+          url: experience/
           weight: 1
-        - name: Talks
-          url: talks/
+        - name: Projects
+          url: projects/
           weight: 2
+        - name: Awards
+          url: awards/
+          weight: 3
         - name: Resume
           url: cv_rosa2.pdf
-          weight: 3 
+          weight: 4 
+        - name: My Artist Side
+          url: arts/
+          weight: 5
         # - name: Photography
         #   url: https://pmichaillat.substack.com
         #   weight: 4
 
 params:
-    description: "I am a PhD Candidate in Mathematical and Environmental Economics."
+    description: "I am a Computer Engineering Student at University of Tehran."
     author: Name
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
@@ -59,8 +65,16 @@ params:
           imageHeight: 200
           imageTitle: Rayhaneh Einollahi
           buttons:
-            - name: Publications
-              url: papers/
+            - name: Experience
+              url: experience/
+            - name: Projects
+              url: projects/
+            - name: Awards
+              url: awards/
+            - name: Resume
+              url: cv_rosa2.pdf
+            - name: My Artist Side
+              url: arts/
             # - name: Courses
             #   url: courses/
             # - name: Data
@@ -69,28 +83,28 @@ params:
            #   url: https://pmichaillat.substack.com
             # - name: Tags
             #   url: tags/
-            - name: Talks
-              url: talks/
-            - name: Resume
-              url: cv_rosa2.pdf
+            # - name: Talks
+            #   url: talks/
+            # - name: Resume
+            #   url: cv_rosa2.pdf
             #- name: Archive
             #  url: archive/
     socialIcons:
         # - name: CV
         #   url: cv_rosa.pdf
         - name: Email
-          url: mailto:rosa.van-den-ende@univ-paris1.fr
+          url: mailto:Rayhaneheinollahi@gmail.com
         - name: Location
           url: location/
     
-        - name: Google Scholar
-          url: https://scholar.google.com/citations?user=jwrYE5sAAAAJ&hl=fr
+        # - name: Google Scholar
+        #   url: https://scholar.google.com/citations?user=jwrYE5sAAAAJ&hl=fr
         - name: LinkedIn
-          url: https://linkedin.com/in/rosavandenende
-        # - name: GitHub
-        #   url: https://github.com/pmichaillat
-        - name: ORCID
-          url: https://orcid.org/0000-0002-9417-1075
+          url: https://linkedin.com/in/rayhaneh-einollahi
+        - name: GitHub
+          url: https://github.com/Rayhaneh-Einollahi
+        # - name: ORCID
+        #   url: https://orcid.org/0000-0002-9417-1075
       
 
     assets:
@@ -100,7 +114,7 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Rosa van den Ende"
+      text: "Rayhaneh Einollahi"
       icon: favicon.ico
       iconHeight: 18
 
