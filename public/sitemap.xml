@@ -41,11 +41,15 @@
   </url><url>
     <loc>http://localhost:1313/arts/farewell/</loc>
   </url><url>
+    <loc>http://localhost:1313/arts/melina/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/3d-animation/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/animate/</loc>
   </url><url>
     <loc>http://localhost:1313/archive/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/attack-on-titan/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/bonacich-centrality/</loc>
   </url><url>
