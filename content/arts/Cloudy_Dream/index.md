@@ -15,45 +15,18 @@ cover:
 
 ---
 
-##### Abstract
+##### About
 
-Responsibility in complex networks extends beyond direct actions: players should also bear responsibility for the indirect effects within their supply chains or network. We introduce a novel framework to allocate responsibility for indirect environmental, social, and economic impacts across a dynamic network. Unlike static approaches, our framework accounts for the evolving structure of supply chains, financial systems, and other interconnected systems, where relationships change over time. We use the time-dependent Laplacian matrix to capture how responsibility propagates through the network, revealing a diffusion process that aligns with key axioms of fairness: linearity, efficiency, symmetry, and the independent player property. We show that approximating the responsibility measure preserves these properties, supporting the use of our framework as a rigorous and practical method to allocate responsibility in real-world networks.
+Our second short animation, Cloudy_Dream (2021), is also an environmental film that addresses the urgent issue of water scarcity. The story follows a careless young boy who leaves the faucet running, unaware of the consequences of wasting water. One day, he discovers a pair of magical glasses that open a new path before him, revealing a future without water. There, he witnesses the impact of his careless actions and decides to make amends.
 
----
+This 3D animation took a full year of tireless work to complete. The production process was far more complex than our previous project. Although we had gained more experience in animation-making, a lack of precise planning and numerous obstacles extended the timeline significantly.
 
-##### Download
-
-+ [You can find the paper here.](https://shs.hal.science/halshs-05046082v1)
-<!-- + [Online appendix](appendix2.pdf)
-+ [Code and data](https://github.com/pmichaillat/unemployment-gap) -->
+Like Green and Blue, this project was created entirely without outside guidance or assistance. Every aspect—concept and story, storyboard, scene and character modeling, animation, lighting, rendering and compositing, visual effects, sound design, and music—was carried out by us alone.
 
 ---
 
-##### Adjacency matrix A and its corresponding digraph G
+##### 🎥 YouTube Link
 
-![](paper1.png)
-
----
-<!-- 
-##### Citation
-
-Author 1 and Author 2. Year. "Title." *Journal* Volume (Issue): First page–Last page. https://doi.org/paper_doi.
-
-```BibTeX
-@article{AAYY,
-author = {Author 1 and Author 2},
-doi = {paper_doi},
-journal = {Journal},
-number = {Issue},
-pages = {XXX--YYY},
-title ={Title},
-volume = {Volume},
-year = {Year}}
-```
+{{< youtube eX6B53ZbN2I >}}
 
 ---
-
-##### Related material
-
-+ [Presentation slides](presentation2.pdf)
- -->
