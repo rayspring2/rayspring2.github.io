@@ -85,8 +85,8 @@
   "keywords": [
     "Compiler", "C ", "java", "antlr"
   ],
-  "articleBody": "Supervisor: Professor Navabi\nOverview The SAYAC compiler translates Mini-C ASTs into SAYAC assembly. Its backend consists of:\nMemory Manager: Handles globals, locals, temps, stack frames, and alignment. Register Manager: Allocates CPU registers, handles spills/reloads. Instruction Emitter: Generates SAYAC syntax for ALU, memory, and control operations. Code Generator: Handles main conversion of AST nodes to assembly. int main() { int i; for (i = 0; i \u003c 5; i++) { if (i == 3) break; } return 0; } func_main: STR FP SP ADR ZR SP FP ADI -2 SP MSI 0 R1 ADI -2 R2 LDR FP R2 ADI 2 R2 for_condition_0: CMI 5 R1 BRR gt for_body_1 JMP for_end_2 for_body_1: CMI 3 R1 BRR eq If_4 JMP After_If_6 If_4: JMP for_end_2 JMP After_If_6 After_If_6: JMP for_step_3 for_step_3: ADR ZR R1 R2 ADI 1 R1 JMP for_condition_0 for_end_2: MSI 0 R3 ADR ZR R3 RT JMP func_ret_main func_ret_main: ADR ZR FP SP LDR FP FP JMR 0 RA R0 ⭐ Star on GitHub ",
-  "wordCount" : "163",
+  "articleBody": "Supervisor: Professor Zainalabedin Navabi\nOverview The SAYAC compiler translates Mini-C ASTs into SAYAC assembly. Its backend consists of:\nMemory Manager: Handles globals, locals, temps, stack frames, and alignment. Register Manager: Allocates CPU registers, handles spills/reloads. Instruction Emitter: Generates SAYAC syntax for ALU, memory, and control operations. Code Generator: Handles main conversion of AST nodes to assembly. int main() { int i; for (i = 0; i \u003c 5; i++) { if (i == 3) break; } return 0; } func_main: STR FP SP ADR ZR SP FP ADI -2 SP MSI 0 R1 ADI -2 R2 LDR FP R2 ADI 2 R2 for_condition_0: CMI 5 R1 BRR gt for_body_1 JMP for_end_2 for_body_1: CMI 3 R1 BRR eq If_4 JMP After_If_6 If_4: JMP for_end_2 JMP After_If_6 After_If_6: JMP for_step_3 for_step_3: ADR ZR R1 R2 ADI 1 R1 JMP for_condition_0 for_end_2: MSI 0 R3 ADR ZR R3 RT JMP func_ret_main func_ret_main: ADR ZR FP SP LDR FP FP JMR 0 RA R0 ⭐ Star on GitHub ",
+  "wordCount" : "164",
   "inLanguage": "en",
   "image":"http://localhost:1313/image.jpg","datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -177,8 +177,8 @@
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/arts/" title="My Artist Side">
-                    <span>My Artist Side</span>
+                <a href="http://localhost:1313/arts/" title="Beyond Code">
+                    <span>Beyond Code</span>
                 </a>
             </li>
         </ul>
@@ -197,7 +197,7 @@
 
 </div>
   </header> 
-  <div class="post-content"><p><strong>Supervisor:</strong> Professor Navabi</p>
+  <div class="post-content"><p><strong>Supervisor:</strong> Professor Zainalabedin Navabi</p>
 <hr>
 <h2 id="overview">Overview</h2>
 <p>The SAYAC compiler translates <strong>Mini-C ASTs</strong> into <strong>SAYAC assembly</strong>. Its backend consists of:</p>

@@ -15,7 +15,7 @@ cover:
  #   Text: "Other Journal Name"
 
 ---
-**Supervisor:** Professor Navabi
+**Supervisor:** Professor Zainalabedin Navabi
 
 ---
 
