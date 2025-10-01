@@ -10,10 +10,25 @@
   padding: 2rem 2rem;
   box-sizing: border-box;
 }
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    width: 100vw;
+    padding: 1rem;
+  }
+}
+
 .project-card {
   padding: 1rem;
   background-color: #fff; 
   box-shadow: 0 2px 6px rgba(255, 0, 191, 0.1);
+  text-align: center; /* Center text and inline elements */
+}
+.project-card img {
+  display: block;
+  margin: 0 auto;
 }
 </style>
 <div class="project-grid">
