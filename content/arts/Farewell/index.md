@@ -6,7 +6,7 @@ author: ["By: Rayhaneh Einollahi and Bahareh Einollahi"]
 description: "Sometimes, when life feels heavy, kind souls do their best to lift us up—but even with their help, the struggle remains." 
 summary: "Sometimes, when life feels heavy, kind souls do their best to lift us up—but even with their help, the struggle remains." 
 cover:
-    image: "Farewell.png"
+    image: "Farewell.jpg"
     alt: "Farewell"
     relative: false
 #editPost:
@@ -23,7 +23,7 @@ Sometimes, when life feels heavy, kind souls do their best to lift us up—but e
 
 ##### Farewell
 
-![](Farewell.png)
+![](Farewell.jpg)
 
 ---
 ##### Process Video

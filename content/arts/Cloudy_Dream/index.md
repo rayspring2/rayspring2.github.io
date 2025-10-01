@@ -6,7 +6,7 @@ author: ["Directors: Rayhaneh Einollahi and Bahareh Einollahi"]
 description: "Cloudy Dream is also an enviornmental film that points out to the serious problem of water scarcity." 
 summary: "Cloudy Dream is also an enviornmental film that points out to the serious problem of water scarcity." 
 cover:
-    image: "Cloudy-Dream.png"
+    image: "Cloudy-Dream.jpg"
     alt: "Cloudy Dream thumbnail"
     relative: false
 #editPost:

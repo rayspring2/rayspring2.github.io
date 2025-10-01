@@ -6,8 +6,8 @@ author: ["By: Rayhaneh Einollahi and Bahareh Einollahi"]
 description: "Tragedies like this happen all too often. A building collapsed, and many firefighters lost their lives while protecting others. I couldn’t stop thinking about their bravery and sacrifice." 
 summary: "Tragedies like this happen all too often. A building collapsed, and many firefighters lost their lives while protecting others. I couldn’t stop thinking about their bravery and sacrifice." 
 cover:
-    image: "metro.png"
-    alt: "metro.png"
+    image: "metro.jpg"
+    alt: "metro.jpg"
     relative: false
 #editPost:
  #   URL: "https://doi.org/10.1073/pnas.1816454115"
@@ -23,7 +23,7 @@ Tragedies like this happen all too often. A building collapsed, and many firefig
 
 ##### Metropole
 
-![](metro.png)
+![](metro.jpg)
 
 ---
 <!-- ##### Process Video

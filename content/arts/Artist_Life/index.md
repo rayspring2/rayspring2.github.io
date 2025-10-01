@@ -6,7 +6,7 @@ author: ["By: Rayhaneh Einollahi and Bahareh Einollahi"]
 description: "Once, when I had more time, I loved creating small gifts for the birthdays of those most precious to me." 
 summary: "Once, when I had more time, I loved creating small gifts for the birthdays of those most precious to me." 
 cover:
-  image: "artist.final.page_02.png"
+  image: "artist.final.page_02.jpg"
   alt: "Artist Life"
   relative: false
 #editPost:
@@ -23,16 +23,16 @@ Once, when I had more time, I loved creating small gifts for the birthdays of th
 
 ##### Farewell
 {{< gallery >}}
-  <img src="artist.final.page_01.png" alt="Artist Life">
-  <img src="artist.final.page_02.png" alt="Artist Life">
-  <img src="artist.final.page_03.png" alt="Artist Life">
-  <img src="artist.final.page_04.png" alt="Artist Life">
-  <img src="artist.final.page_05.png" alt="Artist Life">
-  <img src="artist.final.page_06.png" alt="Artist Life">
-  <img src="artist.final.page_07.png" alt="Artist Life">
-  <img src="artist.final.page_08.png" alt="Artist Life">
-  <img src="artist.final.page_09.png" alt="Artist Life">
-  <img src="artist.final.page_10.png" alt="Artist Life">
+  <img src="artist.final.page_01.jpg" alt="Artist Life">
+  <img src="artist.final.page_02.jpg" alt="Artist Life">
+  <img src="artist.final.page_03.jpg" alt="Artist Life">
+  <img src="artist.final.page_04.jpg" alt="Artist Life">
+  <img src="artist.final.page_05.jpg" alt="Artist Life">
+  <img src="artist.final.page_06.jpg" alt="Artist Life">
+  <img src="artist.final.page_07.jpg" alt="Artist Life">
+  <img src="artist.final.page_08.jpg" alt="Artist Life">
+  <img src="artist.final.page_09.jpg" alt="Artist Life">
+  <img src="artist.final.page_10.jpg" alt="Artist Life">
 {{< /gallery >}}
 
 ##### Process Video
