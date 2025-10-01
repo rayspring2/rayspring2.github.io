@@ -4,6 +4,8 @@
   <url>
     <loc>http://localhost:1313/projects/sayac-compiler/</loc>
   </url><url>
+    <loc>http://localhost:1313/projects/ai-course-projects/</loc>
+  </url><url>
     <loc>http://localhost:1313/arts/artist_life/</loc>
   </url><url>
     <loc>http://localhost:1313/arts/cloudy_dream/</loc>
@@ -18,6 +20,8 @@
   </url><url>
     <loc>http://localhost:1313/tags/3d-animation/</loc>
   </url><url>
+    <loc>http://localhost:1313/tags/ai/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/animate/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/antlr/</loc>
@@ -31,6 +35,8 @@
     <loc>http://localhost:1313/tags/attack-on-titan/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/c-/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/clustering/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/comic/</loc>
   </url><url>
@@ -48,6 +54,8 @@
   </url><url>
     <loc>http://localhost:1313/arts/</loc>
   </url><url>
+    <loc>http://localhost:1313/tags/neural-network-/</loc>
+  </url><url>
     <loc>http://localhost:1313/officehours/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/photoshop/</loc>
@@ -55,6 +63,8 @@
     <loc>http://localhost:1313/projects/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/purple/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/python/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
   </url><url>
