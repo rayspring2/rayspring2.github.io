@@ -79,6 +79,15 @@
       <description>Tragedies like this happen all too often. A building collapsed, and many firefighters lost their lives while protecting others. I couldn’t stop thinking about their bravery and sacrifice.</description>
     </item>
     
+    <item>
+      <title>Architectural 3D Modeling</title>
+      <link>http://localhost:1313/arts/architecture-3d-modeling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/arts/architecture-3d-modeling/</guid>
+      <description>These 3D models were created from given architectural plans,trying to achieve the structure and form the architect had in mind.</description>
+    </item>
+    
     
     <item>
       <title>Diffusion in dynamic networks with continuous inputs to allocate responsibility</title>
