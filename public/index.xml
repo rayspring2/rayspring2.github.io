@@ -5,26 +5,7 @@
     <link>http://localhost:1313/</link>
     <description>Recent content on Rayhaneh Einollahi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 10 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Course Name 1</title>
-      <link>http://localhost:1313/courses/course1/</link>
-      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/courses/course1/</guid>
-      <description>This graduate course presents various methods and results.</description>
-    </item>
-    
-    <item>
-      <title>Course Title 2</title>
-      <link>http://localhost:1313/courses/course2/</link>
-      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/courses/course2/</guid>
-      <description>This undergraduate course presents many new things.</description>
-    </item>
-    
+    <language>en</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#39;Artist Life&#39; Digital Paintings</title>
       <link>http://localhost:1313/arts/artist_life/</link>
@@ -90,15 +71,6 @@
     
     
     <item>
-      <title>Diffusion in dynamic networks with continuous inputs to allocate responsibility</title>
-      <link>http://localhost:1313/papers/paper1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/papers/paper1/</guid>
-      <description>We investigate how responsibility for any negative effect spreads in a dynamic network. Not just responsibility for carbon emissions, but also for example systemic risk.</description>
-    </item>
-    
-    <item>
       <title>Location</title>
       <link>http://localhost:1313/location/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -115,39 +87,12 @@ France&lt;/p&gt;
     </item>
     
     <item>
-      <title>Network-based allocation of responsibility for GHG emissions</title>
-      <link>http://localhost:1313/papers/paper2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/papers/paper2/</guid>
-      <description>In this paper we allocate responsibilities for GHG emissions in a network.</description>
-    </item>
-    
-    <item>
       <title>Office Hours</title>
       <link>http://localhost:1313/officehours/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/officehours/</guid>
       <description>Schedule and location for office hours.</description>
-    </item>
-    
-    <item>
-      <title>Strategic environmental responsibility in networks</title>
-      <link>http://localhost:1313/papers/paper4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/papers/paper4/</guid>
-      <description>[Work in progress] We evaluate the effect of changing the underlying network structure on the responsibility allocation, and we investigate how we can use this to achieve the emisison reduction goals of the Paris Agreement. </description>
-    </item>
-    
-    <item>
-      <title>The quantum state reduction of general intital states through spontaneous unitarity violation</title>
-      <link>http://localhost:1313/papers/paper3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/papers/paper3/</guid>
-      <description>This paper shows other things. Published in Journal Name, 2015.</description>
     </item>
     
   </channel>
