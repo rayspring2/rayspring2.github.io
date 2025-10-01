@@ -33,5 +33,14 @@
       <description>AI Course Projects including: AI Search Algorithms, Genetic algorithm, Min/Max, Machine learning classification, FC &amp;amp; CNN, Clustering</description>
     </item>
     
+    <item>
+      <title>Auction Service</title>
+      <link>http://localhost:1313/projects/auction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/auction/</guid>
+      <description>Auction Service is a Go app that lets post owners create auctions and users place bids. It integrates with Divar for login, handles auctions and bids securely, and tracks everything with JWT-based auth. Simple, reliable, and ready to run locally or in Docker.</description>
+    </item>
+    
   </channel>
 </rss>

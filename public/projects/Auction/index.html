@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Auction Service | Rayhaneh Einollahi</title>
+<meta name="keywords" content="Go, Postgresql, docker, CI/CD, Divar">
+<meta name="description" content="Auction Service is a Go app that lets post owners create auctions and users place bids. It integrates with Divar for login, handles auctions and bids securely, and tracks everything with JWT-based auth. Simple, reliable, and ready to run locally or in Docker.">
+<meta name="author" content="By: Rayhaneh Einollahi, Sana Mousavi, Zahra Hosseini">
+<link rel="canonical" href="http://localhost:1313/projects/auction/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.58503ebfb7b228dba08964df462182648eb55b6ba2fd80473caaa5d8b08e29e5.css" integrity="sha256-WFA&#43;v7eyKNugiWTfRiGCZI61W2ui/YBHPKql2LCOKeU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/projects/auction/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Auction Service" />
+<meta property="og:description" content="Auction Service is a Go app that lets post owners create auctions and users place bids. It integrates with Divar for login, handles auctions and bids securely, and tracks everything with JWT-based auth. Simple, reliable, and ready to run locally or in Docker." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/projects/auction/" />
+<meta property="og:image" content="http://localhost:1313/image.jpg" /><meta property="article:section" content="projects" />
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/image.jpg" />
+<meta name="twitter:title" content="Auction Service"/>
+<meta name="twitter:description" content="Auction Service is a Go app that lets post owners create auctions and users place bids. It integrates with Divar for login, handles auctions and bids securely, and tracks everything with JWT-based auth. Simple, reliable, and ready to run locally or in Docker."/>
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "http://localhost:1313/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Auction Service",
+      "item": "http://localhost:1313/projects/auction/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Auction Service",
+  "name": "Auction Service",
+  "description": "Auction Service is a Go app that lets post owners create auctions and users place bids. It integrates with Divar for login, handles auctions and bids securely, and tracks everything with JWT-based auth. Simple, reliable, and ready to run locally or in Docker.",
+  "keywords": [
+    "Go", "Postgresql", "docker", "CI/CD", "Divar"
+  ],
+  "articleBody": "Team Lead: Sajjad Sanikhani\nIntroduction The Auction Service is a Go-based application that integrates with Divar’s OpenPlatform to enable post owners to create auctions for their listings and allow other users to place bids. The system authenticates users through OAuth, manages auction lifecycles, and tracks bidding activity.\nKey Features: OAuth integration with Divar Role-based access (post owners vs. viewers) Auction creation and management Bidding system JWT-based authentication Sentry error reporting System Architecture The application follows a clean architecture approach with the following components:\nHTTP Server - Handles incoming requests and renders HTML templates Services Layer - Contains business logic for auctions, bids, users, and posts Data Access Layer - Uses sqlc-generated code for type-safe database queries External Integration - Connects with Divar’s OpenPlatform API Project Structure . ├── cmd/ # Application entry points │ └── server/ # Main server executable ├── configs/ # Configuration files ├── internal/ # Private application code │ ├── bidding/ # Auction and bidding logic │ │ ├── models/ # Database models for bidding │ │ └── services/ # Business logic for auctions/bids │ ├── clients/ # External API clients │ ├── config/ # Configuration structures │ ├── httpServer/ # HTTP handlers and middleware │ ├── oauth/ # OAuth service │ ├── posts/ # Post-related functionality │ ├── user/ # User models │ └── users/ # User services ├── pkg/ # Reusable packages │ ├── auth/ # JWT authentication │ ├── database/ # Database connection handling │ └── error_report/ # Sentry integration └── templates/ # HTML templates Installation \u0026 Setup Prerequisites Go 1.22+ PostgreSQL 14+ Docker (optional) ngrok (for local development with Divar integration) sentry dns (if sentry_enabled: true in config) Setting Up the Development Environment 1- Clone the repository 2- Install dependencies:\nmake dependencies 3- Set up the local database:\nmake setup_local This will start a PostgreSQL instance in Docker with the following configuration:\nHost: localhost\nPort: 5432\nUser: bid_user\nPassword: secret\nDatabase: bid_db\nConfiguration The application is configured through a YAML file. Create your configuration by copying the example:\ncp configs/config.example.yaml configs/config.yaml Configuration Options database: host: \"localhost\" # Database host port: 5432 # Database port username: \"bid_user\" # Database username password: \"securepassword\" # Database password dbname: \"bid_db\" # Database name sslmode: \"disable\" # SSL mode for database connection maxconns: 10 # Maximum database connections minconns: 2 # Minimum database connections maxconnlifetimejitterminutes: 5 # Connection lifetime jitter maxconnlifetimeminutes: 60 # Maximum connection lifetime maxconnnidletimeminutes: 30 # Connection idle timeout openplatform: api_key: \"\" # Divar API key oauth_secret: \"\" # Divar OAuth secret app_slug: \"\" # Divar app slug base_url: \"\" # Public URL for callbacks server: port: # Server port jwt: secretKey: \"jwt_secret_key\" # JWT secret key expiryDuration: 24 # JWT expiry in hours logging: sentry_enabled: false # Enable Sentry error reporting sentry_dsn: \"\" # Sentry DSN level: info # Logging level Running the Application Local Development Make sure your PostgreSQL database is running Start the application: make run # or go run ./cmd/server serve --configFile ./configs/config.yaml For Divar integration, expose your local server using ngrok: ngrok http --url=r Access the application at in divar new extention setup: https:///oauth2/user-auth/ https:///oauth2/user-callback/ Building the Binary make build The binary will be generated in the .bin directory.\nAuthentication Flow Users are redirected from Divar to the application via OAuth: Initial URL: /oauth2/user-auth/ Callback URL: /oauth2/user-callback/ After authentication: Post owners can create auctions or view existing bids Viewers can place bids if an auction exists for the post JWT tokens are used for authorization Development Generating SQL Code The project uses sqlc for type-safe SQL:\nmake generate_sql Running Tests make test Linting \u0026 Formatting make lint # Run linter make lint-fix # Fix linting issues make fmt # Format code Docker Deployment Building the Docker Image docker build -t auction-app . Running the Container docker run -p :8080 -v /path/to/config.yaml:/srv/build/configs/config.yaml auction-app Docker Image Details The Docker build process uses a multi-stage approach:\nBuild stage using Go 1.22 to compile the application\nRuntime stage using Ubuntu 22.04 with minimal dependencies\nTroubleshooting Common Issues Database Connection Problems\nCheck PostgreSQL is running and accessible\nVerify database credentials in config.yaml\nDivar Integration Issues\nEnsure ngrok is properly forwarding to your local server\nVerify the OAuth redirect URL matches exactly what’s configured in Divar\nSentry Error Reporting\nIf enabled, check the DSN is correctly configured\nTest error reporting by triggering a non-critical error\nLogs Check application logs for detailed error information. When Sentry is enabled, errors will also be reported to the Sentry dashboard. uses request_id and flow_id to track requests. For additional support or to report issues, please contact the development team.\n⭐ Star on GitHub ",
+  "wordCount" : "777",
+  "inLanguage": "en",
+  "image":"http://localhost:1313/image.jpg","datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "By: Rayhaneh Einollahi, Sana Mousavi, Zahra Hosseini"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/projects/auction/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rayhaneh Einollahi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Rayhaneh Einollahi">
+             
+                <img src="http://localhost:1313/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Rayhaneh Einollahi</a>
+            <div class="logo-switches">
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/experience/" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/awards/" title="Awards">
+                    <span>Awards</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cv_rosa2.pdf" title="Resume">
+                    <span>Resume</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/arts/" title="My Artist Side">
+                    <span>My Artist Side</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Auction Service
+    </h1>
+    <div class="post-meta">By: Rayhaneh Einollahi, Sana Mousavi, Zahra Hosseini
+
+</div>
+  </header> 
+  <div class="post-content"><p><strong>Team Lead:</strong> Sajjad Sanikhani</p>
+<hr>
+<h2 id="introduction">Introduction</h2>
+<p>The Auction Service is a Go-based application that integrates with Divar&rsquo;s OpenPlatform to enable post owners to create auctions for their listings and allow other users to place bids. The system authenticates users through OAuth, manages auction lifecycles, and tracks bidding activity.</p>
+<h4 id="key-features">Key Features:</h4>
+<ul>
+<li>OAuth integration with Divar</li>
+<li>Role-based access (post owners vs. viewers)</li>
+<li>Auction creation and management</li>
+<li>Bidding system</li>
+<li>JWT-based authentication</li>
+<li>Sentry error reporting</li>
+</ul>
+<h2 id="system-architecture">System Architecture</h2>
+<p>The application follows a clean architecture approach with the following components:</p>
+<ul>
+<li>HTTP Server - Handles incoming requests and renders HTML templates</li>
+<li>Services Layer - Contains business logic for auctions, bids, users, and posts</li>
+<li>Data Access Layer - Uses sqlc-generated code for type-safe database queries</li>
+<li>External Integration - Connects with Divar&rsquo;s OpenPlatform API</li>
+</ul>
+<h2 id="project-structure">Project Structure</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>├──  cmd/  <span style="color:#aaa;font-style:italic"># Application entry points</span>
+</span></span><span style="display:flex;"><span>│  └──  server/  <span style="color:#aaa;font-style:italic"># Main server executable</span>
+</span></span><span style="display:flex;"><span>├──  configs/  <span style="color:#aaa;font-style:italic"># Configuration files</span>
+</span></span><span style="display:flex;"><span>├──  internal/  <span style="color:#aaa;font-style:italic"># Private application code</span>
+</span></span><span style="display:flex;"><span>│  ├──  bidding/  <span style="color:#aaa;font-style:italic"># Auction and bidding logic</span>
+</span></span><span style="display:flex;"><span>│  │  ├──  models/  <span style="color:#aaa;font-style:italic"># Database models for bidding</span>
+</span></span><span style="display:flex;"><span>│  │  └──  services/  <span style="color:#aaa;font-style:italic"># Business logic for auctions/bids</span>
+</span></span><span style="display:flex;"><span>│  ├──  clients/  <span style="color:#aaa;font-style:italic"># External API clients</span>
+</span></span><span style="display:flex;"><span>│  ├──  config/  <span style="color:#aaa;font-style:italic"># Configuration structures</span>
+</span></span><span style="display:flex;"><span>│  ├──  httpServer/  <span style="color:#aaa;font-style:italic"># HTTP handlers and middleware</span>
+</span></span><span style="display:flex;"><span>│  ├──  oauth/  <span style="color:#aaa;font-style:italic"># OAuth service</span>
+</span></span><span style="display:flex;"><span>│  ├──  posts/  <span style="color:#aaa;font-style:italic"># Post-related functionality</span>
+</span></span><span style="display:flex;"><span>│  ├──  user/  <span style="color:#aaa;font-style:italic"># User models</span>
+</span></span><span style="display:flex;"><span>│  └──  users/  <span style="color:#aaa;font-style:italic"># User services</span>
+</span></span><span style="display:flex;"><span>├──  pkg/  <span style="color:#aaa;font-style:italic"># Reusable packages</span>
+</span></span><span style="display:flex;"><span>│  ├──  auth/  <span style="color:#aaa;font-style:italic"># JWT authentication</span>
+</span></span><span style="display:flex;"><span>│  ├──  database/  <span style="color:#aaa;font-style:italic"># Database connection handling</span>
+</span></span><span style="display:flex;"><span>│  └──  error_report/  <span style="color:#aaa;font-style:italic"># Sentry integration</span>
+</span></span><span style="display:flex;"><span>└──  templates/  <span style="color:#aaa;font-style:italic"># HTML templates</span>
+</span></span></code></pre></div><h2 id="installation--setup">Installation &amp; Setup</h2>
+<h4 id="prerequisites">Prerequisites</h4>
+<ul>
+<li>Go 1.22+</li>
+<li>PostgreSQL 14+</li>
+<li>Docker (optional)</li>
+<li>ngrok (for local development with Divar integration)</li>
+<li>sentry dns (if <code>sentry_enabled: true</code> in config)</li>
+</ul>
+<h4 id="setting-up-the-development-environment">Setting Up the Development Environment</h4>
+<p>1-  Clone the repository
+2- Install dependencies:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make  dependencies
+</span></span></code></pre></div><p>3- Set up the local database:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>make setup_local
+</span></span></code></pre></div><p>This will start a PostgreSQL instance in Docker with the following configuration:</p>
+<ul>
+<li>
+<p>Host: localhost</p>
+</li>
+<li>
+<p>Port: 5432</p>
+</li>
+<li>
+<p>User: bid_user</p>
+</li>
+<li>
+<p>Password: secret</p>
+</li>
+<li>
+<p>Database: bid_db</p>
+</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<p>The application is configured through a YAML file. Create your configuration by copying the example:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp  configs/config.example.yaml  configs/config.yaml
+</span></span></code></pre></div><h4 id="configuration-options">Configuration Options</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#1e90ff;font-weight:bold">database</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">host</span>:<span style="color:#bbb"> </span><span style="color:#a50">&#34;localhost&#34;</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Database host</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">port</span>:<span style="color:#bbb"> </span><span style="color:#099">5432</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Database port</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">username</span>:<span style="color:#bbb"> </span><span style="color:#a50">&#34;bid_user&#34;</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Database username</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">password</span>:<span style="color:#bbb"> </span><span style="color:#a50">&#34;securepassword&#34;</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Database password</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">dbname</span>:<span style="color:#bbb"> </span><span style="color:#a50">&#34;bid_db&#34;</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Database name</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">sslmode</span>:<span style="color:#bbb"> </span><span style="color:#a50">&#34;disable&#34;</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># SSL mode for database connection</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">maxconns</span>:<span style="color:#bbb"> </span><span style="color:#099">10</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Maximum database connections</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">minconns</span>:<span style="color:#bbb"> </span><span style="color:#099">2</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Minimum database connections</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">maxconnlifetimejitterminutes</span>:<span style="color:#bbb"> </span><span style="color:#099">5</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Connection lifetime jitter</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">maxconnlifetimeminutes</span>:<span style="color:#bbb"> </span><span style="color:#099">60</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Maximum connection lifetime</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">maxconnnidletimeminutes</span>:<span style="color:#bbb"> </span><span style="color:#099">30</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Connection idle timeout</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">openplatform</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">api_key</span>:<span style="color:#bbb"> </span><span style="color:#a50">&#34;&lt;divar API Key&gt;&#34;</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Divar API key</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">oauth_secret</span>:<span style="color:#bbb"> </span><span style="color:#a50">&#34;&lt;oauth secret&gt;&#34;</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Divar OAuth secret</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">app_slug</span>:<span style="color:#bbb"> </span><span style="color:#a50">&#34;&lt;app slug&gt;&#34;</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Divar app slug</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">base_url</span>:<span style="color:#bbb"> </span><span style="color:#a50">&#34;&lt;ngrok static domain&gt;&#34;</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Public URL for callbacks</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">server</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">port</span>:<span style="color:#bbb"> </span>&lt;port&gt; <span style="color:#bbb"> </span><span style="color:#aaa;font-style:italic"># Server port</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">jwt</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">secretKey</span>:<span style="color:#bbb"> </span><span style="color:#a50">&#34;jwt_secret_key&#34;</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># JWT secret key</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">expiryDuration</span>:<span style="color:#bbb"> </span><span style="color:#099">24</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># JWT expiry in hours</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">logging</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">sentry_enabled</span>:<span style="color:#bbb"> </span><span style="color:#00a">false</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Enable Sentry error reporting</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">sentry_dsn</span>:<span style="color:#bbb"> </span><span style="color:#a50">&#34;&#34;</span><span style="color:#bbb">  </span><span style="color:#aaa;font-style:italic"># Sentry DSN</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#1e90ff;font-weight:bold">level</span>:<span style="color:#bbb"> </span>info <span style="color:#bbb"> </span><span style="color:#aaa;font-style:italic"># Logging level</span><span style="color:#bbb">
+</span></span></span></code></pre></div><h2 id="running-the-application">Running the Application</h2>
+<h4 id="local-development">Local Development</h4>
+<ol>
+<li>Make sure your PostgreSQL database is running</li>
+<li>Start the application:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make  run
+</span></span><span style="display:flex;"><span><span style="color:#aaa;font-style:italic"># or</span>
+</span></span><span style="display:flex;"><span>go  run  ./cmd/server  serve  --configFile  ./configs/config.yaml
+</span></span></code></pre></div><ol start="3">
+<li>For Divar integration, expose your local server using ngrok:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ngrok  http  --url=r&lt;ngrock-static-domain&gt; &lt;port&gt;
+</span></span></code></pre></div><ol start="4">
+<li>Access the application at in divar new extention setup:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>https://&lt;replace base_url(for example ngrok-static-domain)&gt;/oauth2/user-auth/
+</span></span><span style="display:flex;"><span>https://&lt;replace base_url(for example ngrok-static-domain)&gt;/oauth2/user-callback/
+</span></span></code></pre></div><h4 id="building-the-binary">Building the Binary</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make  build
+</span></span></code></pre></div><p>The binary will be generated in the <code>.bin</code> directory.</p>
+<h2 id="authentication-flow">Authentication Flow</h2>
+<ol>
+<li>Users are redirected from Divar to the application via OAuth:
+<ul>
+<li>Initial URL: <code>/oauth2/user-auth/</code></li>
+<li>Callback URL: <code>/oauth2/user-callback/</code></li>
+</ul>
+</li>
+<li>After authentication:
+<ul>
+<li>Post owners can create auctions or view existing bids</li>
+<li>Viewers can place bids if an auction exists for the post</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>JWT tokens are used for authorization</li>
+</ul>
+<h2 id="development">Development</h2>
+<h4 id="generating-sql-code">Generating SQL Code</h4>
+<p>The project uses <code>sqlc</code> for type-safe SQL:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make  generate_sql
+</span></span></code></pre></div><h4 id="running-tests">Running Tests</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make  <span style="color:#0aa">test</span>
+</span></span></code></pre></div><h3 id="linting--formatting">Linting &amp; Formatting</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make  lint  <span style="color:#aaa;font-style:italic"># Run linter</span>
+</span></span><span style="display:flex;"><span>make  lint-fix  <span style="color:#aaa;font-style:italic"># Fix linting issues</span>
+</span></span><span style="display:flex;"><span>make  fmt  <span style="color:#aaa;font-style:italic"># Format code</span>
+</span></span></code></pre></div><h2 id="docker-deployment">Docker Deployment</h2>
+<h4 id="building-the-docker-image">Building the Docker Image</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker  build  -t  auction-app  .
+</span></span></code></pre></div><h4 id="running-the-container">Running the Container</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker  run  -p &lt;port&gt;:8080  -v /path/to/config.yaml:/srv/build/configs/config.yaml auction-app
+</span></span></code></pre></div><h4 id="docker-image-details">Docker Image Details</h4>
+<p>The Docker build process uses a multi-stage approach:</p>
+<ol>
+<li>
+<p>Build stage using Go 1.22 to compile the application</p>
+</li>
+<li>
+<p>Runtime stage using Ubuntu 22.04 with minimal dependencies</p>
+</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h4 id="common-issues">Common Issues</h4>
+<ol>
+<li>
+<p>Database Connection Problems</p>
+<ul>
+<li>
+<p>Check PostgreSQL is running and accessible</p>
+</li>
+<li>
+<p>Verify database credentials in config.yaml</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Divar Integration Issues</p>
+<ul>
+<li>
+<p>Ensure ngrok is properly forwarding to your local server</p>
+</li>
+<li>
+<p>Verify the OAuth redirect URL matches exactly what&rsquo;s configured in Divar</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sentry Error Reporting</p>
+<ul>
+<li>
+<p>If enabled, check the DSN is correctly configured</p>
+</li>
+<li>
+<p>Test error reporting by triggering a non-critical error</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="logs">Logs</h4>
+<ul>
+<li>Check application logs for detailed error information. When Sentry is enabled, errors will also be reported to the Sentry dashboard.</li>
+<li>uses <code>request_id</code> and <code>flow_id</code> to track requests.</li>
+</ul>
+<hr>
+<p>For additional support or to report issues, please contact the development team.</p>
+<hr>
+<p><a href="https://github.com/Rayhaneh-Einollahi/Auction_Service" target="_blank" rel="noopener" 
+style="display:inline-block; padding:12px 24px; font-weight:bold; background-color:#24292e; 
+color:white; border-radius:8px; text-decoration:none; font-size:16px;">
+⭐ Star on GitHub
+</a></p>
+<hr>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/go/">Go</a></li>
+      <li><a href="http://localhost:1313/tags/postgresql/">Postgresql</a></li>
+      <li><a href="http://localhost:1313/tags/docker/">Docker</a></li>
+      <li><a href="http://localhost:1313/tags/ci/cd/">CI/CD</a></li>
+      <li><a href="http://localhost:1313/tags/divar/">Divar</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    &copy; 2025 Rayhaneh Einollahi
+    <span>
+    &middot;  Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">a modified version</a>
+         of 
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>
