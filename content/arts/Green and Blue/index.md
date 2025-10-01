@@ -30,3 +30,6 @@ From the initial idea and storyboard to 3D modeling, animation, lighting, render
 {{< youtube Dx2q2vFGogE >}}
 
 ---
+##### Film Laurels
+
+![](greenandblue_laurels.jpg)

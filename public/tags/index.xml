@@ -70,6 +70,15 @@
     </item>
     
     <item>
+      <title>CI/CD</title>
+      <link>http://localhost:1313/tags/ci/cd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/ci/cd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Clustering</title>
       <link>http://localhost:1313/tags/clustering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -97,11 +106,65 @@
     </item>
     
     <item>
+      <title>Cpp</title>
+      <link>http://localhost:1313/tags/cpp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/cpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Digital Painting</title>
       <link>http://localhost:1313/tags/digital-painting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/digital-painting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Divar</title>
+      <link>http://localhost:1313/tags/divar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/divar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DLD</title>
+      <link>http://localhost:1313/tags/dld/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/dld/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/tags/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>http://localhost:1313/tags/go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph</title>
+      <link>http://localhost:1313/tags/graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/graph/</guid>
       <description></description>
     </item>
     
@@ -124,6 +187,15 @@
     </item>
     
     <item>
+      <title>Modelsim</title>
+      <link>http://localhost:1313/tags/modelsim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/modelsim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Neural-Network </title>
       <link>http://localhost:1313/tags/neural-network-/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -142,11 +214,29 @@
     </item>
     
     <item>
+      <title>Postgresql</title>
+      <link>http://localhost:1313/tags/postgresql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Purple</title>
       <link>http://localhost:1313/tags/purple/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/purple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pygame </title>
+      <link>http://localhost:1313/tags/pygame-/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/pygame-/</guid>
       <description></description>
     </item>
     
@@ -165,6 +255,42 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/render/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Server</title>
+      <link>http://localhost:1313/tags/server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stocks</title>
+      <link>http://localhost:1313/tags/stocks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/stocks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Systemverilog</title>
+      <link>http://localhost:1313/tags/systemverilog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/systemverilog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Verilog</title>
+      <link>http://localhost:1313/tags/verilog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/verilog/</guid>
       <description></description>
     </item>
     

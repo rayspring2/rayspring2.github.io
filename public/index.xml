@@ -43,6 +43,24 @@
     </item>
     
     <item>
+      <title>DLD Course Projects</title>
+      <link>http://localhost:1313/projects/dld-cource-projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/dld-cource-projects/</guid>
+      <description>Digital Logic Design projects from Dr. Alizadeh. Includes hands-on experiments with circuits, Verilogcode, and simulations with Modelsim to explore digital logic concepts.</description>
+    </item>
+    
+    <item>
+      <title>Stock Scraper</title>
+      <link>http://localhost:1313/projects/stocks-scraper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/stocks-scraper/</guid>
+      <description>A Python-based web scraper that collects real-time stock data, prices, and market insights from financial websites for analysis and tracking.</description>
+    </item>
+    
+    <item>
       <title>&#39;Artist Life&#39; Digital Paintings</title>
       <link>http://localhost:1313/arts/artist_life/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

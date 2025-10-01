@@ -4,7 +4,15 @@
   <url>
     <loc>http://localhost:1313/projects/sayac-compiler/</loc>
   </url><url>
+    <loc>http://localhost:1313/projects/networked-soccer-stars/</loc>
+  </url><url>
     <loc>http://localhost:1313/projects/ai-course-projects/</loc>
+  </url><url>
+    <loc>http://localhost:1313/projects/auction/</loc>
+  </url><url>
+    <loc>http://localhost:1313/projects/dld-cource-projects/</loc>
+  </url><url>
+    <loc>http://localhost:1313/projects/stocks-scraper/</loc>
   </url><url>
     <loc>http://localhost:1313/arts/artist_life/</loc>
   </url><url>
@@ -36,21 +44,37 @@
   </url><url>
     <loc>http://localhost:1313/tags/c-/</loc>
   </url><url>
+    <loc>http://localhost:1313/tags/ci/cd/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/clustering/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/comic/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/compiler/</loc>
   </url><url>
+    <loc>http://localhost:1313/tags/cpp/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/digital-painting/</loc>
   </url><url>
+    <loc>http://localhost:1313/tags/divar/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/dld/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/docker/</loc>
+  </url><url>
     <loc>http://localhost:1313/experience/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/go/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/graph/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/java/</loc>
   </url><url>
     <loc>http://localhost:1313/location/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/modeling/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/modelsim/</loc>
   </url><url>
     <loc>http://localhost:1313/arts/</loc>
   </url><url>
@@ -60,9 +84,13 @@
   </url><url>
     <loc>http://localhost:1313/tags/photoshop/</loc>
   </url><url>
+    <loc>http://localhost:1313/tags/postgresql/</loc>
+  </url><url>
     <loc>http://localhost:1313/projects/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/purple/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/pygame-/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
   </url><url>
@@ -70,6 +98,14 @@
   </url><url>
     <loc>http://localhost:1313/tags/render/</loc>
   </url><url>
+    <loc>http://localhost:1313/tags/server/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/stocks/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/systemverilog/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/verilog/</loc>
   </url>
 </urlset>

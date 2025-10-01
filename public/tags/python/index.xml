@@ -7,12 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Networked Soccer Stars Game</title>
+      <link>http://localhost:1313/projects/networked-soccer-stars/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/networked-soccer-stars/</guid>
+      <description>A Soccer Stars-inspired game written in Python, featuring multiplayer support via a C&#43;&#43; server</description>
+    </item>
+    
+    <item>
       <title>AI Course Projects</title>
       <link>http://localhost:1313/projects/ai-course-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/projects/ai-course-projects/</guid>
-      <description>Simple C Compiler in Java Designed For SAYAC Proccessor</description>
+      <description>AI Course Projects including: AI Search Algorithms, Genetic algorithm, Min/Max, Machine learning classification, FC &amp;amp; CNN, Clustering</description>
+    </item>
+    
+    <item>
+      <title>Stock Scraper</title>
+      <link>http://localhost:1313/projects/stocks-scraper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/stocks-scraper/</guid>
+      <description>A Python-based web scraper that collects real-time stock data, prices, and market insights from financial websites for analysis and tracking.</description>
     </item>
     
   </channel>
