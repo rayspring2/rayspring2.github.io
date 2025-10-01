@@ -57,9 +57,11 @@ params:
     profileMode:
           enabled: true
           title: Rayhaneh Einollahi
-          subtitle: "I am a PhD candidate in Mathematical and Environmental Economics at Université Paris I Panthéon-Sorbonne and Universität Bielefeld, 
-            under the supervision of Agnieszka Rusinowska and Manuel Förster. I am an expert on network theory and complex systems in the context of climate policy. 
-            I am mostly interested in environmental allocation questions and in how to capture the concept of distributive climate justice in mathematics and economics."
+          subtitle: "I'm a Computer Engineering student at University of Tehran.I'm currently working on 
+            a compiler backend for SAYAC embedded system, focusing on intermediate representation (IR) design,
+             instruction selection, and optimization passes. I'm currently learning Advanced topics in compiler construction, 
+             static program analysis. I'm interested Algorithms, Graph Theory and Compiler Design. and looking to collaborate 
+             on Projects that involve complex algorithm design, language processing, or applying formal methods to real-world problems."
           imageUrl: "picture2.jpg"
           imageWidth: 200
           imageHeight: 200
