@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>SAYAC Compiler | Rayhaneh Einollahi</title>
+<meta name="keywords" content="Compiler, C , java, antlr">
+<meta name="description" content="Simple C Compiler in Java Designed For SAYAC Proccessor">
+<meta name="author" content="By: Rayhaneh Einollahi, Bahareh Einollahi, Mahdis Mirzaei, Hasti Aboalhasani">
+<link rel="canonical" href="http://localhost:1313/projects/sayac-compiler/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.58503ebfb7b228dba08964df462182648eb55b6ba2fd80473caaa5d8b08e29e5.css" integrity="sha256-WFA&#43;v7eyKNugiWTfRiGCZI61W2ui/YBHPKql2LCOKeU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/projects/sayac-compiler/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="SAYAC Compiler" />
+<meta property="og:description" content="Simple C Compiler in Java Designed For SAYAC Proccessor" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/projects/sayac-compiler/" />
+<meta property="og:image" content="http://localhost:1313/image.jpg" /><meta property="article:section" content="projects" />
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/image.jpg" />
+<meta name="twitter:title" content="SAYAC Compiler"/>
+<meta name="twitter:description" content="Simple C Compiler in Java Designed For SAYAC Proccessor"/>
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "http://localhost:1313/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "SAYAC Compiler",
+      "item": "http://localhost:1313/projects/sayac-compiler/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "SAYAC Compiler",
+  "name": "SAYAC Compiler",
+  "description": "Simple C Compiler in Java Designed For SAYAC Proccessor",
+  "keywords": [
+    "Compiler", "C ", "java", "antlr"
+  ],
+  "articleBody": "Supervisor: Professor Navabi\nOverview The SAYAC compiler translates Mini-C ASTs into SAYAC assembly. Its backend consists of:\nMemory Manager: Handles globals, locals, temps, stack frames, and alignment. Register Manager: Allocates CPU registers, handles spills/reloads. Instruction Emitter: Generates SAYAC syntax for ALU, memory, and control operations. Code Generator: Handles main conversion of AST nodes to assembly. int main() { int i; for (i = 0; i \u003c 5; i++) { if (i == 3) break; } return 0; } func_main: STR FP SP ADR ZR SP FP ADI -2 SP MSI 0 R1 ADI -2 R2 LDR FP R2 ADI 2 R2 for_condition_0: CMI 5 R1 BRR gt for_body_1 JMP for_end_2 for_body_1: CMI 3 R1 BRR eq If_4 JMP After_If_6 If_4: JMP for_end_2 JMP After_If_6 After_If_6: JMP for_step_3 for_step_3: ADR ZR R1 R2 ADI 1 R1 JMP for_condition_0 for_end_2: MSI 0 R3 ADR ZR R3 RT JMP func_ret_main func_ret_main: ADR ZR FP SP LDR FP FP JMR 0 RA R0 ⭐ Star on GitHub ",
+  "wordCount" : "163",
+  "inLanguage": "en",
+  "image":"http://localhost:1313/image.jpg","datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "By: Rayhaneh Einollahi, Bahareh Einollahi, Mahdis Mirzaei, Hasti Aboalhasani"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/projects/sayac-compiler/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rayhaneh Einollahi",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Rayhaneh Einollahi">
+             
+                <img src="http://localhost:1313/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Rayhaneh Einollahi</a>
+            <div class="logo-switches">
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/experience/" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/awards/" title="Awards">
+                    <span>Awards</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cv_rosa2.pdf" title="Resume">
+                    <span>Resume</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/arts/" title="My Artist Side">
+                    <span>My Artist Side</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      SAYAC Compiler
+    </h1>
+    <div class="post-meta">By: Rayhaneh Einollahi, Bahareh Einollahi, Mahdis Mirzaei, Hasti Aboalhasani
+
+</div>
+  </header> 
+  <div class="post-content"><p><strong>Supervisor:</strong> Professor Navabi</p>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>The SAYAC compiler translates <strong>Mini-C ASTs</strong> into <strong>SAYAC assembly</strong>. Its backend consists of:</p>
+<ul>
+<li><strong>Memory Manager:</strong> Handles globals, locals, temps, stack frames, and alignment.</li>
+<li><strong>Register Manager:</strong> Allocates CPU registers, handles spills/reloads.</li>
+<li><strong>Instruction Emitter:</strong> Generates SAYAC syntax for ALU, memory, and control operations.</li>
+<li><strong>Code Generator:</strong> Handles main conversion of AST nodes to assembly.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#0aa">int</span> <span style="color:#0a0">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#0aa">int</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#00a">for</span> (i = <span style="color:#099">0</span>; i &lt; <span style="color:#099">5</span>; i++) {
+</span></span><span style="display:flex;"><span>        <span style="color:#00a">if</span> (i == <span style="color:#099">3</span>) <span style="color:#00a">break</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#00a">return</span> <span style="color:#099">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-asm" data-lang="asm"><span style="display:flex;"><span>func_main:
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">STR</span> <span style="color:#a00">FP</span> <span style="color:#a00">SP</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">ADR</span> <span style="color:#a00">ZR</span> <span style="color:#a00">SP</span> <span style="color:#a00">FP</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">ADI</span> -<span style="color:#099">2</span> <span style="color:#a00">SP</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">MSI</span> <span style="color:#099">0</span> <span style="color:#a00">R1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">ADI</span> -<span style="color:#099">2</span> <span style="color:#a00">R2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">LDR</span> <span style="color:#a00">FP</span> <span style="color:#a00">R2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">ADI</span> <span style="color:#099">2</span> <span style="color:#a00">R2</span>
+</span></span><span style="display:flex;"><span>for_condition_0:
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">CMI</span> <span style="color:#099">5</span> <span style="color:#a00">R1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">BRR</span> <span style="color:#a00">gt</span> <span style="color:#a00">for_body_1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">JMP</span> <span style="color:#a00">for_end_2</span>
+</span></span><span style="display:flex;"><span>for_body_1:
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">CMI</span> <span style="color:#099">3</span> <span style="color:#a00">R1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">BRR</span> <span style="color:#a00">eq</span> <span style="color:#a00">If_4</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">JMP</span> <span style="color:#a00">After_If_6</span>
+</span></span><span style="display:flex;"><span>If_4:
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">JMP</span> <span style="color:#a00">for_end_2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">JMP</span> <span style="color:#a00">After_If_6</span>
+</span></span><span style="display:flex;"><span>After_If_6:
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">JMP</span> <span style="color:#a00">for_step_3</span>
+</span></span><span style="display:flex;"><span>for_step_3:
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">ADR</span> <span style="color:#a00">ZR</span> <span style="color:#a00">R1</span> <span style="color:#a00">R2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">ADI</span> <span style="color:#099">1</span> <span style="color:#a00">R1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">JMP</span> <span style="color:#a00">for_condition_0</span>
+</span></span><span style="display:flex;"><span>for_end_2:
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">MSI</span> <span style="color:#099">0</span> <span style="color:#a00">R3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">ADR</span> <span style="color:#a00">ZR</span> <span style="color:#a00">R3</span> <span style="color:#a00">RT</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">JMP</span> <span style="color:#a00">func_ret_main</span>
+</span></span><span style="display:flex;"><span>func_ret_main:
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">ADR</span> <span style="color:#a00">ZR</span> <span style="color:#a00">FP</span> <span style="color:#a00">SP</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">LDR</span> <span style="color:#a00">FP</span> <span style="color:#a00">FP</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0a0">JMR</span> <span style="color:#099">0</span> <span style="color:#a00">RA</span> <span style="color:#a00">R0</span>
+</span></span></code></pre></div><hr>
+<p><a href="https://github.com/Rayhaneh-Einollahi/SAYAC_Compiler" target="_blank" rel="noopener" 
+style="display:inline-block; padding:12px 24px; font-weight:bold; background-color:#24292e; 
+color:white; border-radius:8px; text-decoration:none; font-size:16px;">
+⭐ Star on GitHub
+</a></p>
+<hr>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/compiler/">Compiler</a></li>
+      <li><a href="http://localhost:1313/tags/c-/">C </a></li>
+      <li><a href="http://localhost:1313/tags/java/">Java</a></li>
+      <li><a href="http://localhost:1313/tags/antlr/">Antlr</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    &copy; 2025 Rayhaneh Einollahi
+    <span>
+    &middot;  Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">a modified version</a>
+         of 
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>

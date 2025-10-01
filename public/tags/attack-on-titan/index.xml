@@ -15,14 +15,5 @@
       <description>Same here, I love Attack on Titan!</description>
     </item>
     
-    <item>
-      <title>&#39;Melina&#39; Digital Painting</title>
-      <link>http://localhost:1313/projects/melina/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/projects/melina/</guid>
-      <description>Same here, I love Attack on Titan!</description>
-    </item>
-    
   </channel>
 </rss>
