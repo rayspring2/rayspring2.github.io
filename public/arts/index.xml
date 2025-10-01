@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="http://localhost:1313/arts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>&#39;Artist Life&#39; Digital Painting</title>
+      <title>&#39;Artist Life&#39; Digital Paintings</title>
       <link>http://localhost:1313/arts/artist_life/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -34,12 +34,30 @@
     </item>
     
     <item>
+      <title>&#39;Green and Blue&#39; Short Animation 2018</title>
+      <link>http://localhost:1313/arts/green-and-blue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/arts/green-and-blue/</guid>
+      <description>Our first animation, &amp;#39;Green and Blue&amp;#39; (2018), is a 3D environmental short about air pollution.</description>
+    </item>
+    
+    <item>
       <title>&#39;Melina&#39; Digital Painting</title>
       <link>http://localhost:1313/arts/melina/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/arts/melina/</guid>
       <description>Same here, I love Attack on Titan!</description>
+    </item>
+    
+    <item>
+      <title>&#39;Metropole&#39; Digital Painting</title>
+      <link>http://localhost:1313/arts/metropole/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/arts/metropole/</guid>
+      <description>Tragedies like this happen all too often. A building collapsed, and many firefighters lost their lives while protecting others. I couldn’t stop thinking about their bravery and sacrifice.</description>
     </item>
     
   </channel>

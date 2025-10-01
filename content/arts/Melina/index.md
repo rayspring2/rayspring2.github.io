@@ -19,11 +19,12 @@ cover:
 
 Same here, I love Attack on Titan!
 This is my first Digital Painting too.
+
 ---
 
 ##### Melina
 
-![](Melina.png)
+![](Melina.jpg)
 
 ---
 ##### Process Video

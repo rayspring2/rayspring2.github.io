@@ -1,7 +1,7 @@
 ---
-title: "'Artist Life' Digital Painting" 
+title: "'Artist Life' Digital Paintings" 
 #date: 2023-02-01
-tags: ["Digital Painting","photoshop","purple"]
+tags: ["Digital Painting","photoshop","comic"]
 author: ["By: Rayhaneh Einollahi and Bahareh Einollahi"]
 description: "Once, when I had more time, I loved creating small gifts for the birthdays of those most precious to me." 
 summary: "Once, when I had more time, I loved creating small gifts for the birthdays of those most precious to me." 
