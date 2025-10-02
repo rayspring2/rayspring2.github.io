@@ -22,7 +22,7 @@ menu:
           url: awards/
           weight: 3
         - name: Resume
-          url: cv_rosa2.pdf
+          url: cv.pdf
           weight: 4 
         - name: Beyond Code
           url: arts/
@@ -76,7 +76,7 @@ params:
             - name: Awards
               url: awards/
             - name: Resume
-              url: cv_rosa2.pdf
+              url: cv.pdf
             - name: Beyond Code
               url: arts/
             # - name: Courses
