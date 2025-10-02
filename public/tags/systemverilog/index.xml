@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Systemverilog on Rayhaneh Einollahi</title>
-    <link>https://Rayhaneh-Einollahi.github.io/tags/systemverilog/</link>
+    <link>https://rayspring2.github.io/tags/systemverilog/</link>
     <description>Recent content in Systemverilog on Rayhaneh Einollahi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://Rayhaneh-Einollahi.github.io/tags/systemverilog/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://rayspring2.github.io/tags/systemverilog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DLD Course Projects</title>
-      <link>https://Rayhaneh-Einollahi.github.io/projects/dld-cource-projects/</link>
+      <link>https://rayspring2.github.io/projects/dld-cource-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://Rayhaneh-Einollahi.github.io/projects/dld-cource-projects/</guid>
+      <guid>https://rayspring2.github.io/projects/dld-cource-projects/</guid>
       <description>Digital Logic Design projects from Dr. Alizadeh. Includes hands-on experiments with circuits, Verilogcode, and simulations with Modelsim to explore digital logic concepts.</description>
     </item>
     

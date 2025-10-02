@@ -1,5 +1,5 @@
 baseURL: "https://rayspring2.github.io/" 
-title: Rayhaneh Einollahi
+title: Bahareh Einollahi
 pagination:
   pagerSize: 20
 theme: PaperMod
@@ -56,7 +56,7 @@ params:
     math: true
     profileMode:
           enabled: true
-          title: Rayhaneh Einollahi
+          title: Bahareh Einollahi
           subtitle: "I'm a Computer Engineering student at the University of Tehran, passionate about Compiler Design, Algorithms, and Graph Theory. <br>
 
             Currently, I'm working on the backend of a compiler for the SAYAC embedded system, focusing on intermediate representation (IR) design, instruction selection, and optimization passes. Alongside this, I'm exploring advanced topics in compiler construction and static program analysis.<br>
@@ -67,7 +67,7 @@ params:
           imageUrl: "picture2.jpg"
           imageWidth: 200
           imageHeight: 200
-          imageTitle: Rayhaneh Einollahi
+          imageTitle: Bahareh Einollahi
           buttons:
             - name: Experience
               url: experience/
