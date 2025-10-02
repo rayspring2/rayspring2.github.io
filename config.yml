@@ -97,16 +97,16 @@ params:
         # - name: CV
         #   url: cv_rosa.pdf
         - name: Email
-          url: mailto:Rayhaneheinollahi@gmail.com
+          url: mailto:bahareheinollahi@ut.ac.ir
         - name: Location
           url: location/
     
         # - name: Google Scholar
         #   url: https://scholar.google.com/citations?user=jwrYE5sAAAAJ&hl=fr
-        - name: LinkedIn
-          url: https://linkedin.com/in/rayhaneh-einollahi
+        # - name: LinkedIn
+        #   url: https://linkedin.com/in/
         - name: GitHub
-          url: https://github.com/Rayhaneh-Einollahi
+          url: https://github.com/rayspring2
         # - name: ORCID
         #   url: https://orcid.org/0000-0002-9417-1075
       
@@ -118,7 +118,7 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Rayhaneh Einollahi"
+      text: "Bahareh Einollahi"
       icon: favicon.ico
       iconHeight: 18
 
