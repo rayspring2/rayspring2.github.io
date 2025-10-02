@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Auction Service | Bahareh Einollahi</title>
 <meta name="keywords" content="Go, Postgresql, docker, CI/CD, Divar">
 <meta name="description" content="Auction Service is a Go app that lets post owners create auctions and users place bids. It integrates with Divar for login, handles auctions and bids securely, and tracks everything with JWT-based auth. Simple, reliable, and ready to run locally or in Docker.">
 <meta name="author" content="By: Rayhaneh Einollahi, Sana Mousavi, Zahra Hosseini">
-<link rel="canonical" href="https://rayspring2.github.io/projects/auction/">
+<link rel="canonical" href="http://localhost:1313/projects/auction/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.58503ebfb7b228dba08964df462182648eb55b6ba2fd80473caaa5d8b08e29e5.css" integrity="sha256-WFA&#43;v7eyKNugiWTfRiGCZI61W2ui/YBHPKql2LCOKeU=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://rayspring2.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://rayspring2.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://rayspring2.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://rayspring2.github.io/apple-touch-icon.png">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
 
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://rayspring2.github.io/projects/auction/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/projects/auction/">
 <noscript>
     <style>
         #theme-toggle,
@@ -30,8 +30,8 @@
 </noscript><meta property="og:title" content="Auction Service" />
 <meta property="og:description" content="Auction Service is a Go app that lets post owners create auctions and users place bids. It integrates with Divar for login, handles auctions and bids securely, and tracks everything with JWT-based auth. Simple, reliable, and ready to run locally or in Docker." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rayspring2.github.io/projects/auction/" />
-<meta property="og:image" content="https://rayspring2.github.io/image.jpg" /><meta property="article:section" content="projects" />
+<meta property="og:url" content="http://localhost:1313/projects/auction/" />
+<meta property="og:image" content="http://localhost:1313/image.jpg" /><meta property="article:section" content="projects" />
 
 
 
@@ -42,7 +42,7 @@
 
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://rayspring2.github.io/image.jpg" />
+<meta name="twitter:image" content="http://localhost:1313/image.jpg" />
 <meta name="twitter:title" content="Auction Service"/>
 <meta name="twitter:description" content="Auction Service is a Go app that lets post owners create auctions and users place bids. It integrates with Divar for login, handles auctions and bids securely, and tracks everything with JWT-based auth. Simple, reliable, and ready to run locally or in Docker."/>
 
@@ -62,13 +62,13 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Projects",
-      "item": "https://rayspring2.github.io/projects/"
+      "item": "http://localhost:1313/projects/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Auction Service",
-      "item": "https://rayspring2.github.io/projects/auction/"
+      "item": "http://localhost:1313/projects/auction/"
     }
   ]
 }
@@ -86,7 +86,7 @@
   "articleBody": "Team Lead: Sajjad Sanikhani\nIntroduction The Auction Service is a Go-based application that integrates with Divar’s OpenPlatform to enable post owners to create auctions for their listings and allow other users to place bids. The system authenticates users through OAuth, manages auction lifecycles, and tracks bidding activity.\nKey Features: OAuth integration with Divar Role-based access (post owners vs. viewers) Auction creation and management Bidding system JWT-based authentication Sentry error reporting System Architecture The application follows a clean architecture approach with the following components:\nHTTP Server - Handles incoming requests and renders HTML templates Services Layer - Contains business logic for auctions, bids, users, and posts Data Access Layer - Uses sqlc-generated code for type-safe database queries External Integration - Connects with Divar’s OpenPlatform API Project Structure . ├── cmd/ # Application entry points │ └── server/ # Main server executable ├── configs/ # Configuration files ├── internal/ # Private application code │ ├── bidding/ # Auction and bidding logic │ │ ├── models/ # Database models for bidding │ │ └── services/ # Business logic for auctions/bids │ ├── clients/ # External API clients │ ├── config/ # Configuration structures │ ├── httpServer/ # HTTP handlers and middleware │ ├── oauth/ # OAuth service │ ├── posts/ # Post-related functionality │ ├── user/ # User models │ └── users/ # User services ├── pkg/ # Reusable packages │ ├── auth/ # JWT authentication │ ├── database/ # Database connection handling │ └── error_report/ # Sentry integration └── templates/ # HTML templates Installation \u0026 Setup Prerequisites Go 1.22+ PostgreSQL 14+ Docker (optional) ngrok (for local development with Divar integration) sentry dns (if sentry_enabled: true in config) Setting Up the Development Environment 1- Clone the repository 2- Install dependencies:\nmake dependencies 3- Set up the local database:\nmake setup_local This will start a PostgreSQL instance in Docker with the following configuration:\nHost: localhost\nPort: 5432\nUser: bid_user\nPassword: secret\nDatabase: bid_db\nConfiguration The application is configured through a YAML file. Create your configuration by copying the example:\ncp configs/config.example.yaml configs/config.yaml Configuration Options database: host: \"localhost\" # Database host port: 5432 # Database port username: \"bid_user\" # Database username password: \"securepassword\" # Database password dbname: \"bid_db\" # Database name sslmode: \"disable\" # SSL mode for database connection maxconns: 10 # Maximum database connections minconns: 2 # Minimum database connections maxconnlifetimejitterminutes: 5 # Connection lifetime jitter maxconnlifetimeminutes: 60 # Maximum connection lifetime maxconnnidletimeminutes: 30 # Connection idle timeout openplatform: api_key: \"\" # Divar API key oauth_secret: \"\" # Divar OAuth secret app_slug: \"\" # Divar app slug base_url: \"\" # Public URL for callbacks server: port: # Server port jwt: secretKey: \"jwt_secret_key\" # JWT secret key expiryDuration: 24 # JWT expiry in hours logging: sentry_enabled: false # Enable Sentry error reporting sentry_dsn: \"\" # Sentry DSN level: info # Logging level Running the Application Local Development Make sure your PostgreSQL database is running Start the application: make run # or go run ./cmd/server serve --configFile ./configs/config.yaml For Divar integration, expose your local server using ngrok: ngrok http --url=r Access the application at in divar new extention setup: https:///oauth2/user-auth/ https:///oauth2/user-callback/ Building the Binary make build The binary will be generated in the .bin directory.\nAuthentication Flow Users are redirected from Divar to the application via OAuth: Initial URL: /oauth2/user-auth/ Callback URL: /oauth2/user-callback/ After authentication: Post owners can create auctions or view existing bids Viewers can place bids if an auction exists for the post JWT tokens are used for authorization Development Generating SQL Code The project uses sqlc for type-safe SQL:\nmake generate_sql Running Tests make test Linting \u0026 Formatting make lint # Run linter make lint-fix # Fix linting issues make fmt # Format code Docker Deployment Building the Docker Image docker build -t auction-app . Running the Container docker run -p :8080 -v /path/to/config.yaml:/srv/build/configs/config.yaml auction-app Docker Image Details The Docker build process uses a multi-stage approach:\nBuild stage using Go 1.22 to compile the application\nRuntime stage using Ubuntu 22.04 with minimal dependencies\nTroubleshooting Common Issues Database Connection Problems\nCheck PostgreSQL is running and accessible\nVerify database credentials in config.yaml\nDivar Integration Issues\nEnsure ngrok is properly forwarding to your local server\nVerify the OAuth redirect URL matches exactly what’s configured in Divar\nSentry Error Reporting\nIf enabled, check the DSN is correctly configured\nTest error reporting by triggering a non-critical error\nLogs Check application logs for detailed error information. When Sentry is enabled, errors will also be reported to the Sentry dashboard. uses request_id and flow_id to track requests. For additional support or to report issues, please contact the development team.\n⭐ Star on GitHub ",
   "wordCount" : "777",
   "inLanguage": "en",
-  "image":"https://rayspring2.github.io/image.jpg","datePublished": "0001-01-01T00:00:00Z",
+  "image":"http://localhost:1313/image.jpg","datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
   "author":[{
     "@type": "Person",
@@ -94,14 +94,14 @@
   }],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://rayspring2.github.io/projects/auction/"
+    "@id": "http://localhost:1313/projects/auction/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Bahareh Einollahi",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://rayspring2.github.io/favicon.ico"
+      "url": "http://localhost:1313/favicon.ico"
     }
   }
 }
@@ -143,9 +143,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://rayspring2.github.io/" accesskey="h" title="Bahareh Einollahi">
+            <a href="http://localhost:1313/" accesskey="h" title="Bahareh Einollahi">
              
-                <img src="https://rayspring2.github.io/favicon.ico" alt="" aria-label="logo"
+                <img src="http://localhost:1313/favicon.ico" alt="" aria-label="logo"
                     height="18"
                     width="18">Bahareh Einollahi</a>
             <div class="logo-switches">
@@ -155,27 +155,27 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://rayspring2.github.io/experience/" title="Experience">
+                <a href="http://localhost:1313/experience/" title="Experience">
                     <span>Experience</span>
                 </a>
             </li>
             <li>
-                <a href="https://rayspring2.github.io/projects/" title="Projects">
+                <a href="http://localhost:1313/projects/" title="Projects">
                     <span>Projects</span>
                 </a>
             </li>
             <li>
-                <a href="https://rayspring2.github.io/awards/" title="Awards">
+                <a href="http://localhost:1313/awards/" title="Awards">
                     <span>Awards</span>
                 </a>
             </li>
             <li>
-                <a href="https://rayspring2.github.io/cv.pdf" title="Resume">
+                <a href="http://localhost:1313/cv.pdf" title="Resume">
                     <span>Resume</span>
                 </a>
             </li>
             <li>
-                <a href="https://rayspring2.github.io/arts/" title="Beyond Code">
+                <a href="http://localhost:1313/arts/" title="Beyond Code">
                     <span>Beyond Code</span>
                 </a>
             </li>
@@ -420,11 +420,11 @@ color:white; border-radius:8px; text-decoration:none; font-size:16px;">
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://rayspring2.github.io/tags/go/">Go</a></li>
-      <li><a href="https://rayspring2.github.io/tags/postgresql/">Postgresql</a></li>
-      <li><a href="https://rayspring2.github.io/tags/docker/">Docker</a></li>
-      <li><a href="https://rayspring2.github.io/tags/ci/cd/">CI/CD</a></li>
-      <li><a href="https://rayspring2.github.io/tags/divar/">Divar</a></li>
+      <li><a href="http://localhost:1313/tags/go/">Go</a></li>
+      <li><a href="http://localhost:1313/tags/postgresql/">Postgresql</a></li>
+      <li><a href="http://localhost:1313/tags/docker/">Docker</a></li>
+      <li><a href="http://localhost:1313/tags/ci/cd/">CI/CD</a></li>
+      <li><a href="http://localhost:1313/tags/divar/">Divar</a></li>
     </ul>
   </footer>
 </article>

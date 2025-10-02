@@ -16,12 +16,21 @@
     </item>
     
     <item>
-      <title>Networked Soccer Stars Game</title>
-      <link>https://rayspring2.github.io/projects/networked-soccer-stars/</link>
+      <title>Course Management System</title>
+      <link>https://rayspring2.github.io/projects/course-management-system/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rayspring2.github.io/projects/networked-soccer-stars/</guid>
-      <description>A Soccer Stars-inspired game written in Python, featuring multiplayer support via a C&#43;&#43; server</description>
+      <guid>https://rayspring2.github.io/projects/course-management-system/</guid>
+      <description>A C&#43;&#43; OOP-based university management system. Features a web frontend for course registration and social profiles</description>
+    </item>
+    
+    <item>
+      <title>Plants vs Zombies Game</title>
+      <link>https://rayspring2.github.io/projects/plants-vs-zombies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayspring2.github.io/projects/plants-vs-zombies/</guid>
+      <description>An object-oriented C&#43;&#43; implementation of classic tower defense game using SFML for graphics and gameplay</description>
     </item>
     
     <item>
@@ -31,33 +40,6 @@
       
       <guid>https://rayspring2.github.io/projects/ai-course-projects/</guid>
       <description>AI Course Projects including: AI Search Algorithms, Genetic algorithm, Min/Max, Machine learning classification, FC &amp;amp; CNN, Clustering</description>
-    </item>
-    
-    <item>
-      <title>Auction Service</title>
-      <link>https://rayspring2.github.io/projects/auction/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rayspring2.github.io/projects/auction/</guid>
-      <description>Auction Service is a Go app that lets post owners create auctions and users place bids. It integrates with Divar for login, handles auctions and bids securely, and tracks everything with JWT-based auth. Simple, reliable, and ready to run locally or in Docker.</description>
-    </item>
-    
-    <item>
-      <title>DLD Course Projects</title>
-      <link>https://rayspring2.github.io/projects/dld-cource-projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rayspring2.github.io/projects/dld-cource-projects/</guid>
-      <description>Digital Logic Design projects from Dr. Alizadeh. Includes hands-on experiments with circuits, Verilogcode, and simulations with Modelsim to explore digital logic concepts.</description>
-    </item>
-    
-    <item>
-      <title>Stock Scraper</title>
-      <link>https://rayspring2.github.io/projects/stocks-scraper/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rayspring2.github.io/projects/stocks-scraper/</guid>
-      <description>A Python-based web scraper that collects real-time stock data, prices, and market insights from financial websites for analysis and tracking.</description>
     </item>
     
     <item>

@@ -25,55 +25,25 @@ description: "Preprints and articles on this website."
 &nbsp;&nbsp;&nbsp;&nbsp;Feb 2025 – Present  
 
 - **Professor:** Dr. Ramtin Khosravi  
-- **Skills:** Git, Algorithms, C++  
+- **Skills:** Git, Algorithms, C++
 
 
 ### Discrete Mathematics · <span style="font-weight:normal">Supervising Teaching Assistant</span>  
-&nbsp;&nbsp;&nbsp;&nbsp;Feb 2025 – Present  
+&nbsp;&nbsp;&nbsp;&nbsp;Sep 2024 – Present  
 - **Professor:** Dr. Siamak Mohammahi
 - **Skills:** LaTeX, Discrete Mathematics 
 
 
 ### Data Structure & Algorithms · <span style="font-weight:normal">Teaching Assistant</span> 
-&nbsp;&nbsp;&nbsp;&nbsp;Feb 2025 – Present  
+&nbsp;&nbsp;&nbsp;&nbsp;Sep 2025 – Present  
 - **Professor:** Dr. Heshaam Faili
 - **Skills:** Data Structure, Algorithms, LaTeX
 
-
-### Formal Languages & Automata Theory · <span style="font-weight:normal">Teaching Assistant</span> 
-&nbsp;&nbsp;&nbsp;&nbsp;Sep 2025 – Present  
-- **Professor:** Dr. Hossein Hojjat
-- **Skills:** Formal languages, Automata theory, LaTeX
 
 ### Program Languages & Compilers · <span style="font-weight:normal">Teaching Assistant</span> 
 &nbsp;&nbsp;&nbsp;&nbsp;Sep 2025 – Present  
 - **Professor:** Dr. Fatemeh Ghasemi & Dr. Shaghayegh Tavassoli
 - **Skills:** Compiler design, java, LaTeX, Git
-
-
-
-
----
-
-<div style="display:flex; align-items:flex-start; gap:16px;">
-
-  <div>
-    <img src="divar_logo.jpg" alt="Divar" style="width:90px;"/>
-  </div>
-
-  <div>
-    <h2 style="margin:20; line-height:1.2;">Divar</h2>
-    <p style="margin:2px 0; line-height:0.5;"><em>Tehran, Iran</em></p>
-  </div>
-
-</div> 
-
-### Back End Developer · <span style="font-weight:normal">Intern</span> 
-**Dates:** Jan 2025 – Mar 2025  
-- Auction Management Extension for Kenar Divar
-- **Skills:** Go, Git, Linux, CI/CD, SQL
-
-
 
 
 
