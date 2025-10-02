@@ -1,24 +1,27 @@
 # Minimalist Hugo Template for Academic Websites
 
-This repository contains a [Hugo](https://github.com/gohugoio/hugo) template to create a personal academic website. The template uses the [PaperMod theme](https://github.com/adityatelange/hugo-PaperMod), but it modifies it in various ways to be more adapted to academic websites and more minimalist. The website is hosted on [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages).
 
-## Documentation
-
-The template is documented at https://pascalmichaillat.org/d5/.
+This repository 
+This repository contains a [Hugo](https://github.com/gohugoio/hugo) template to create a personal academic website. The template uses [rosavandenende's template](https://github.com/rosavandenende/rosavandenende.github.io), but it modifies it in various ways to be more different puposes. The website is hosted on [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages).
 
 ## Illustration
 
-The website produced by the template can be viewed at https://pascalmichaillat.org/hugo-website/.
+The website produced by the template can be viewed at https://github.com/Rayhaneh-Einollahi/Rayhaneh-Einollahi.github.io.
 
-## Features
 
-+ Webpages are organized in three categories, which are available from any page through the menu and from the homepage through buttons: papers, courses, and data.
-+ A list of tags (keywords) used in papers and courses is automatically generated so visitors can easily see the topics covered in research and teaching.
-+ An archive page is automatically generated so visitors can easily see the most recent material added to the website.
-+ The template provides social icons specific to academia: office hours, Zoom, Substack, and Google Scholar.
-+ The metadata for webpages, which appear below the webpage title, are tailored to the academic context.
-+ Color scheme, font, spacing, buttons, and general appearance have been streamlined and made as minimalist as possible.
-+ The template provides new archetypes for paper pages, course pages, and a search page.
+## What's Added
+A grid page for several posts for several columns of posts.
+A Linked in like Experience page.  
+
+## Other Features
+
+* The website is structured around **three main categories**: papers, courses, and data, accessible via the menu or homepage.
+* **Tags (keywords)** are auto-generated to highlight covered research and teaching topics.
+* An **archive page** is auto-generated to showcase the most recent additions.
+* The template includes **academic-specific social icons** (e.g., office hours, Zoom, Substack, Google Scholar).
+* **Metadata** beneath titles is tailored for academic use.
+* The **design** (colors, fonts, spacing, buttons) is minimalist and streamlined.
+* New **page archetypes** are available for papers, courses, and search.
 
 ## Installation
 
@@ -48,16 +51,6 @@ Once your website is ready to be made public, run `hugo` in the terminal from th
 ### Deployment
 
 With GitHub Desktop, commit the changes and push them to the website repository on GitHub. Then, [GitHub Actions](https://github.com/pmichaillat/hugo-website/actions/workflows/hugo.yml) build the website and deploy it to [GitHub Pages](https://github.com/pmichaillat/hugo-website/deployments/github-pages).
-
-## Performance
-
-Despite the modifications to the PaperMod theme, the website continues to perform well on mobile and desktop devices. Here is an overview of the mobile performance from [PageSpeed Insights](https://pagespeed.web.dev/):
-
-<img width="470" alt="mobile" src="https://github.com/pmichaillat/hugo-website/assets/85443660/1488df3e-19bb-4f9f-8a86-11f361414d92">
-
-And here is an overview of the desktop performance:
-
-<img width="453" alt="desktop" src="https://github.com/pmichaillat/pmichaillat.github.io/assets/85443660/eff134d2-6097-4bc2-bfd7-4f5c18571789">
 
 ## License
 
