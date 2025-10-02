@@ -6,12 +6,14 @@ This repository contains a [Hugo](https://github.com/gohugoio/hugo) template to 
 
 ## Illustration
 
-The website produced by the template can be viewed at https://github.com/Rayhaneh-Einollahi/Rayhaneh-Einollahi.github.io.
+The website produced by the template can be viewed at https://rayhaneh-einollahi.github.io/.
 
 
 ## What's Added
-A grid page for several posts for several columns of posts.
-A Linked in like Experience page.  
+
+* A **grid layout page** that displays multiple posts across several columns.
+* An **Experience page**, styled similar to LinkedIn, for showcasing professional background and achievements.
+
 
 ## Other Features
 
